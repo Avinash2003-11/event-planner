@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviplanners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+        }
+        nav li {
+            text-decoration: none;
+            display: inline;
+            padding: 20px;
+            background-color: purple;
+            font-size: 20px;
+            color: gold;
+            cursor: pointer;
+            
+            
+        }
+        table {
+            text-align: center;
+            
+            border: 2px solid darkblue;
+            margin: auto;
+        }
+        tr td {
+            font-size: 20px;
+            border: 2px solid darkgreen;
+        }
+        #y {
+            font-weight: bold;
+            background-color: lightgreen;
+        }
+        #x, #z, #v {
+            background-color: red;
+            color: gold;
+        }
+        nav {
+            background-color: brown;
+            padding-left: 40px;
+        }
+        .eventplanner {
+            background-color: yellow;
+        }
+        body {
+            background-color: lightblue;
+            transition: opacity 1s ease;
+        }
+        img {
+            padding-left: 100px;
+            cursor: pointer;
+        }
+        #audio {
+            padding-top: 50px;
+        }
+        #award {
+            padding-right: 3px;
+        }
+        #wedding {
+            padding-left: 30px;
+        }
+        #wedding:hover, #award:hover, #audio:hover {
+            transform: scale(1.2);
+            cursor: grabbing;
+            box-shadow: 0px 0px 10px black;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: lightblue;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid brown;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            padding-top: 80px;
+            color: darkblue;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="eventplanner">
+        <h1>Welcome to Event Planner!</h1>
+        <h1>Plan your events and set your reminder here!</h1><br><br>
+    </div>
+    <nav>
+        <ul>
+            <li onclick="about()">About</li>
+            <li onclick="events()">Events</li>
+            <li onclick="con()">Contact</li>
+        </ul>
+    </nav><br><br><br><br><br><br><br><br><br><br>
+    <div class="items">
+        <table>
+            <tr id="y">
+                <td>Event Name</td>
+                <td>Cost</td>
+                <td>Contact</td>
+            </tr>
+            <tr id="x">
+                <td>Wedding</td>
+                <td>40,000</td>
+                <td>365-986-9857</td>
+            </tr>
+            <tr id="z">
+                <td>Audio Launches</td>
+                <td>1,500,000</td>
+                <td>986-857-4521</td>
+            </tr>
+            <tr id="v">
+                <td>Award Function</td>
+                <td>300,000</td>
+                <td>658-973-6412</td>
+            </tr>
+        </table>
+    </div>
+    <img src="C:\Users\avinash\Downloads\wedding.jpeg" alt="wedding" id="wedding" onclick="showModal('wedding')">
+    <img src="C:\Users\avinash\Downloads\audio launch.jpeg" alt="audio launch" id="audio" onclick="showModal('Audio launch')">
+    <img src="./award function.jpeg" alt="award function" id="award"onclick=" showModal('Award functions')">
+    
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Event Details</h2>
+            <p id="modalText">Event Name: Wedding</p>
+            <p id="modalText">Cost: 400000</p>
+            <p id="modalText">visit event section for more details</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>@2024 All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showModal(eventName) {
+            var modal = document.getElementById("myModal");
+            var modalText = document.getElementById("modalText");
+            modalText.innerHTML = "Event Name: " + eventName;
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        function events(){
+            
+            setTimeout(() => {
+                document.body.style.opacity = "0";
+                window.open("file:///C:/Users/avinash/Downloads/my%20projects/Aviplanners/events.html")
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

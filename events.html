@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviplanners</title>
+    <style>
+        body {
+            background-image: url(./pp.jpeg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+            border: 1.5px solid gold;
+            border-radius: 50%;
+            background-color: pink;
+            opacity: 0.7;
+            padding: 20px;
+            cursor: pointer;
+            transition: opacity 0.3s ease; 
+        }
+
+        h1:hover {
+            opacity: 1;
+        }
+
+        .events {
+            display: flex;
+            justify-content: center;
+            border: 2px solid red;
+            border-radius: 100%;
+            height: 90px;
+            background-color: lightgreen;
+            opacity: 0.75;
+            padding: 10px;
+            cursor: pointer;
+            transition: opacity 0.3s ease; 
+            
+        }
+
+        .events:hover {
+            opacity: 1;
+        }
+
+        ol li {
+            padding: 5px 0;
+            color: darkblue;
+        }
+
+        .wedding {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            color: black;
+            padding: 20px; 
+            border: 1.5px solid black;
+            width: 230px;
+            border-radius: 10px;
+            margin: 20px auto;
+            background-color: white;
+            margin-left: 48%;
+            box-shadow: 10px 10px 20px darkblue;
+            
+        }
+
+        .wedding ol {
+            padding: 0;
+            margin: 0;
+            padding-right: 50px;
+        }
+
+        h2 {
+            color: black;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .wedding:hover{
+            transform: scale(1.3);
+            cursor: pointer;
+        }
+        .audio{
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            color: black;
+            padding: 20px; 
+            border: 1.5px solid black;
+            width: 230px;
+            border-radius: 10px;
+            margin: 20px auto;
+            background-color: white;
+            margin-left: 48%;
+            box-shadow: 10px 10px 20px darkblue;
+        }
+        .audio ol{
+            padding: 0;
+            margin: 0;
+            padding-right: 50px;
+            padding-left: 10px;
+        }
+        .award{
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            color: black;
+            padding: 20px; 
+            border: 1.5px solid black;
+            width: 230px;
+            border-radius: 10px;
+            margin: 20px auto;
+            background-color: white;
+            margin-left: 48%;
+            box-shadow: 5px 5px 20px darkblue;
+        }
+        .award ol{
+            padding: 0;
+            margin: 0;
+            padding-right: 50px;
+            padding-left: 10px;
+        }
+        .audio:hover{
+            transform: scale(1.3);
+            cursor: pointer;
+        }
+        .award:hover{
+            transform: scale(1.3);
+            cursor: pointer;
+        }
+        button{
+            width: 70px;
+            border-radius: 100px;
+            background-color: skyblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>WELCOME TO EVENTS!</h1>
+    <div class="events">
+        <ol>
+            <li>wedding</li>
+            <li>Audio launch</li>
+            <li>Award functions</li>
+        </ol>
+    </div>
+    <div class="wedding">
+        <h2>WEDDING</h2>
+        <ol>
+            <li>location</li>
+            <li>family members</li>
+            <li>food</li>
+            <li>reception</li>
+            <li>marriage</li>
+            <li>photoshoot</li>
+        </ol>
+        <a href="wedding.html">wedding details</a>
+    </div>
+</body>
+<div class="audio">
+    <h3>Audio launch</h3>
+    <ol>
+        <li>Movie name</li>
+        <li>No of celebreties coming</li>
+        <li>Strength of audience</li>
+        <li>Performances</li>
+        <li>celebreties speech</li>
+        <li>launch of audio</li>
+    </ol>
+    <a href="wedding.html">Audio Launch details</a>
+</div>
+<div class="award">
+    <h4>Award function</h4>
+    <ol>
+        <li>For what</li>
+        <li>no of awards</li>
+        <li>no of celebreties coming</li>
+        <li>no of categories of awards</li>
+        <li>preformances</li>
+    </ol>
+    <a href="wedding.html">Award function details</a>
+</div>
+</html>

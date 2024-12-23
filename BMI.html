@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+</head>
+<style>
+    .bmi{
+        text-align: center;
+        margin-top: 300px;
+        border: 1.5px solid red;
+        padding-bottom: 15px;
+        width: 500px;
+        margin-left: 500px;
+        background-color: rgb(215, 122, 215);
+        margin-bottom: 300px;
+        box-shadow: 10px 10px 20px darkblue;
+       
+    }
+    h1{
+        text-align: center;
+        background-color: lightblue;
+        color: dimgray;
+        
+    }
+    h2{
+        color: black;
+    }
+    button{
+        border-radius: 12px;
+        background-color: greenyellow;
+        color: darkred;
+    }
+   
+    .bmi:hover{
+        transform: scale((1.5));
+    }
+</style>
+<body>
+    <h1 id="gg" onclick="ll()">Calculate your BMI here!</h1>
+    <div class="bmi">
+        <h2>BMI CALCULATOR</h2>
+        <div class="weight">
+            <label for="Weight">Enter your weight(kg):</label>
+            <input type="number" name="weight" id="weight" placeholder="Enter weight"><br><br>
+        </div>
+        <div class="height">
+            <label for="height">Enter your height(cm):</label>
+            <input type="number" name="height" id="height" placeholder="Enter height">
+        </div><br>
+        
+        <button onclick="bn()">CALULATE</button><br><br>
+        <textarea name="bmi" id="bmi" readonly></textarea><br>
+            
+        
+    </div>
+</body>
+</html>
+<script>
+    function ll(){
+        var h = document.getElementById("gg")
+        gg.innerHTML="ARE YOU FIT?"
+    }
+    function bn(){
+        var weight = document.getElementById("weight").value
+    var height = document.getElementById("height").value
+    
+    if(weight && height){
+        height=height/100;
+        var bmi = (weight/(height*height)).toFixed(2);
+        
+        var b = document.getElementById("bmi")
+        b.value=bmi
+    
+    } else {
+        alert("enter Weight and height!")
+    }
+    
+    }
+   
+
+</script>
